@@ -1,12 +1,7 @@
 package com.obsquera.pageScripts;
 
-
-
 import java.time.Duration;
-
-
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginPage {
 	
 	public WebDriver driver;
-	
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -47,13 +41,10 @@ public class LoginPage {
 		return this;
 	}
 	
-	
 	public String getLoginPageManagePageTileTitleAssertion()
 	{
 		String actualmanagePageTileTitle=managePageTile.getText();
-		return actualmanagePageTileTitle;
-		
-	
+		return actualmanagePageTileTitle;	
 	}
 	
 	public String getAlertMessageOfIncorrectUsernamePassword()

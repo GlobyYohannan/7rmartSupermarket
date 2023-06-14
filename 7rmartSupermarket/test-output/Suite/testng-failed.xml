@@ -4,6 +4,7 @@
   <parameter name="TitleUpdated" value="GlobyUpdated"/>
   <parameter name="password" value="admin11"/>
   <parameter name="Description" value="first added data by Globy"/>
+  <parameter name="nonexistingsearchcontent" value="not found"/>
   <parameter name="textfielddata" value="Globy"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="deliveryboypassword" value="GYpass12"/>
@@ -12,15 +13,18 @@
   <parameter name="deliveryboyusername" value="GY"/>
   <parameter name="deliveryboyname" value="Globy"/>
   <parameter name="username" value="admin"/>
+  <listeners>
+    <listener class-name="retry.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsquera.testScripts.ManageDeliveryBoyTest">
+      <class name="com.obsquera.testScripts.ManagePageTest">
         <methods>
-          <include name="userIsAbleToAddDatasToListDeliveryBoy" invocation-numbers="0"/>
+          <include name="checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages" invocation-numbers="0"/>
           <include name="browserQuit"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquera.testScripts.ManageDeliveryBoyTest -->
+      </class> <!-- com.obsquera.testScripts.ManagePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

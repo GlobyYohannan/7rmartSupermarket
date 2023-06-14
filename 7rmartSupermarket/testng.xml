@@ -12,14 +12,15 @@
 	<parameter name="deliveryboyname" value="Globy"/>
 	<parameter name="deliveryboyusername" value="GY"/>
 	<parameter name="deliveryboypassword" value="GYpass12"/>
+	<parameter name="nonexistingsearchcontent" value=".........RESULT NOT FOUND......."/>
+	<listeners>
+		<listener class-name="retry.Listeners" />
+	</listeners>
   <test thread-count="5" name="Test">
 	  <classes>
 		  <class name="com.obsquera.testScripts.ManagePageTest">
 			  <methods>
-				  <include name="userIsAbleToEnterDatasToListPage"/>
-				  <include name="checkWhetherUserIsAbleToSearchPagesInManagePages"/>
-				  <include name="checkWhetherUserIsAbleToEditPagesInManagePages"/>
-				  <include name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages"/>
+				  <include name="checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages"/>
 			  </methods>
 		  </class>
 	  </classes>

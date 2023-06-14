@@ -9,12 +9,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.obsquera.utilities.WaitUtility;
+
 import org.openqa.selenium.JavascriptExecutor;
 
 public class ManagePage {
 	
 public WebDriver driver;
-
+WaitUtility waitutility;
 	public ManagePage(WebDriver driver) 
 	{
 		this.driver = driver;
@@ -58,8 +61,7 @@ public WebDriver driver;
 	public ManagePage enterDataInDescriptionField(String descriptionContent )
 	{
 		addPageDescriptionTextField.sendKeys(descriptionContent);
-		return this;
-		
+		return this;	
 	}
 	public ManagePage enterDataInPageField(String pageContent)
 	{
@@ -73,6 +75,7 @@ public WebDriver driver;
 		js.executeScript("window.scrollBy(0,1000)");
 		return this;
 	}
+	
 	public ManagePage clickOnSaveButton()
 	{   
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
@@ -117,6 +120,17 @@ public WebDriver driver;
 		return false;
 	}
 
+	public boolean checkWhetherResponseTableContainsResultNotFoundEntry(String searchContent)
+	{  
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		for (int i=0;i<listPageTableContents.size();i++)
+		{   
+			String listPageTableDetail=listPageTableContents.get(i).getText().trim();
+			if(listPageTableDetail.equalsIgnoreCase(searchContent.trim()))
+				 return true;		
+		}
+		return false;
+	}
 	public ManagePage clickOnEditIcon()
 	{
 		editIcon.click();

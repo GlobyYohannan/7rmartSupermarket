@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="textfielddata" value="Globy"/>
+	<parameter name="browser" value="chrome" />
+	<parameter name="username" value="admin" />
+	<parameter name="password" value="admin11"/>
+	<parameter name="Title" value="Globy"/>
+	<parameter name="Description" value="first added data by Globy"/>
+	<parameter name="Page" value="GY1"/>
+	<parameter name="TitleUpdated" value="GlobyUpdated"/>
+	<parameter name="deliveryboyname" value="Globy"/>
+	<parameter name="deliveryboyusername" value="GY"/>
+	<parameter name="deliveryboypassword" value="GYpass12"/>
+  <test thread-count="5" name="Test">
+	  <classes>
+		  <class name="com.obsquera.testScripts.ManagePageTest">
+			  <methods>
+				  <include name="userIsAbleToEnterDatasToListPage"/>
+				  <include name="checkWhetherUserIsAbleToSearchPagesInManagePages"/>
+				  <include name="checkWhetherUserIsAbleToEditPagesInManagePages"/>
+				  <include name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages"/>
+			  </methods>
+		  </class>
+	  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

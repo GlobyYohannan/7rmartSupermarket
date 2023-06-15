@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
@@ -66,8 +67,8 @@
 	<classpathentry kind="lib" path="F:/eclipse/plugins/org.testng_7.4.0.r202105021533.jar" sourcepath="F:/eclipse/plugins/org.testng.source_7.4.0.r202105021533.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar" sourcepath="C:/Users/user/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1-sources.jar">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="maven.groupId" value="org.testng"/>
 			<attribute name="maven.artifactId" value="testng"/>
 			<attribute name="maven.version" value="7.7.1"/>

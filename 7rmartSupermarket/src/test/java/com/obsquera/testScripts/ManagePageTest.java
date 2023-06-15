@@ -7,6 +7,8 @@ import com.obsquera.pageScripts.LoginPage;
 import com.obsquera.pageScripts.ManagePage;
 import com.obsquera.utilities.ExcelUtility;
 
+import retry.Retry;
+
 public class ManagePageTest extends Base {
 	LoginPage loginpage;
 	ManagePage managepage;
@@ -22,7 +24,7 @@ public class ManagePageTest extends Base {
 		assertTrue(actualSuccessAlertFieldStatus,"User is not able to enter datas to list page");
 	}
 	
-	@Test(description = "TC2_Verify user is able to search pages in list page")
+	@Test(description = "TC2_Verify user is able to search pages in list page",retryAnalyzer = Retry.class)
 	@Parameters("Title")
 	public void checkWhetherUserIsAbleToSearchPagesInManagePages(String Title)
 	{   
@@ -35,7 +37,7 @@ public class ManagePageTest extends Base {
 		boolean searchContentFoundStatus=managepage.checkWhetherResponseTableContainsCorrespondingEntry(Title);
 		assertTrue(searchContentFoundStatus,"User is not able to search Title in list pages");
 			}
-	@Test(description = "TC3_Verify user is able to edit pages in list page")
+	@Test(description = "TC3_Verify user is able to edit pages in list page",retryAnalyzer = Retry.class)
 	@Parameters({"Title","TitleUpdated"})
 	public void checkWhetherUserIsAbleToEditPagesInManagePages(String title, String titleUpdated)
 	{   

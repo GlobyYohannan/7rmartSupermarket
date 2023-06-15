@@ -13,15 +13,18 @@
 	<parameter name="deliveryboyusername" value="GY"/>
 	<parameter name="deliveryboypassword" value="GYpass12"/>
 	<parameter name="nonexistingsearchcontent" value=".........RESULT NOT FOUND......."/>
+	<parameter name="link" value="www.google.com"/> 
 	<listeners>
 		<listener class-name="retry.Listeners" />
 	</listeners>
   <test thread-count="5" name="Test">
 	  <classes>
-		  <class name="com.obsquera.testScripts.ManagePageTest">
-			  <methods>
-				  <include name="checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages"/>
-			  </methods>
+		  <class name="com.obsquera.testScripts.ManageDeliveryBoyTest">
+			   <methods>
+				  <include name="userIsAbleToAddDatasToListDeliveryBoy"/>
+				  <include name="checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages"/>
+				  <include name="checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage"/>
+			  </methods> 
 		  </class>
 	  </classes>
   </test> <!-- Test -->

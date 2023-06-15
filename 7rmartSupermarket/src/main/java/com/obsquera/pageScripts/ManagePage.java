@@ -7,22 +7,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
+import com.obsquera.utilities.PageUtility;
 import com.obsquera.utilities.WaitUtility;
-
 import org.openqa.selenium.JavascriptExecutor;
 
 public class ManagePage {
 	
 public WebDriver driver;
 WaitUtility waitutility;
+PageUtility pageutility;
+
 	public ManagePage(WebDriver driver) 
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);	
 	}
+	
 	@FindBy(xpath="//p[contains(text(),'Manage Pages')]//following::a[@href='https://groceryapp.uniqassosiates.com/admin/list-page']") WebElement managePageTileMoreInfoButton;
 	@FindBy(xpath="//a[contains(@class,'btn btn-rounded btn-primary')][@onclick='click_button(2)']") WebElement searchButton;
 	@FindBy(xpath="//a[contains(@class,'btn btn-rounded btn-danger')][@onclick='click_button(1)']") WebElement newButton;
@@ -44,7 +44,8 @@ WaitUtility waitutility;
 		return this;
 	}
 	public ManagePage clickOnSearchButton()
-	{
+	{   waitutility=new WaitUtility();
+	    waitutility.waitForElement(driver, searchButton);
 		searchButton.click();
 		return this;
 	}
@@ -70,16 +71,16 @@ WaitUtility waitutility;
 	}
 	
 	public ManagePage pageScrollDown()
-	{
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,1000)");
+	{   
+		pageutility=new PageUtility();
+		pageutility.ScrollBy(driver);
 		return this;
 	}
 	
 	public ManagePage clickOnSaveButton()
 	{   
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(saveButton));
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, saveButton);
 		saveButton.click();
 		return this;
 	}
@@ -95,22 +96,24 @@ WaitUtility waitutility;
 		return successAlertFieldStatus;
 	}
 	public ManagePage enterDatatoSearchTextField(String textfielddata)
-	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(searchTextField));
+	{   
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, searchTextField);
 		searchTextField.sendKeys(textfielddata);
 		return this;
 	}
 	public ManagePage clickOnSearchButtoninsideSearchListPagesBand()
-	{
+	{  
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver);
 		searchButtoninsideSearchListPagesBand.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return this;
 	}
 	
 	public boolean checkWhetherResponseTableContainsCorrespondingEntry(String searchContent)
-	{  
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	{   
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver);
 		for (int i=0;i<listPageTableContents.size();i++)
 		{   
 			String listPageTableDetail=listPageTableContents.get(i).getText().trim();
@@ -132,22 +135,24 @@ WaitUtility waitutility;
 		return false;
 	}
 	public ManagePage clickOnEditIcon()
-	{
+	{  
+		waitutility=new WaitUtility();
 		editIcon.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		waitutility.waitForElement(driver);
 		return this;
 	}
 	
 	public ManagePage clearAddPageTitleTextField()
-	{
+	{  
+		waitutility=new WaitUtility();
 		addPageTitleTextField.clear();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		waitutility.waitForElement(driver);
 		return this;
 	}
 	public ManagePage clickOnUpdateButton()
 	{  
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(updateButton));
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, updateButton);
 		updateButton.click();
 		return this;
 	}
@@ -158,8 +163,11 @@ WaitUtility waitutility;
 		return this;
 	}
 	public ManagePage clickOnAlertOkButton()
-	{  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.switchTo().alert().accept();
+	{   
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver);
+		pageutility=new PageUtility();
+		pageutility.alertHandlingaccept(driver);
 		return this;
 	}
 }

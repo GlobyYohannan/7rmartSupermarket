@@ -11,9 +11,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.obsquera.utilities.WaitUtility;
+
 public class ManageDeliveryBoyPage {
 
 public WebDriver driver;
+WaitUtility waitutility;
 	
 	public ManageDeliveryBoyPage(WebDriver driver) 
 	{
@@ -41,12 +44,12 @@ public WebDriver driver;
 		return this;
 	}
 	public ManageDeliveryBoyPage clickOnNewButton()
-	{
+	{   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		newButton.click();
 		return this;
 	}
 	public ManageDeliveryBoyPage userCanAbleToEnterNameInTextField(String deliveryboyname)
-	{
+	{ 
 		nameTextField.sendKeys(deliveryboyname);
 		return this;
 	}
@@ -64,19 +67,20 @@ public WebDriver driver;
 	{
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,1000)");
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		return this;
 	}
 	public ManageDeliveryBoyPage clickOnSaveButton()
 	{   
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(saveButton));
+		waitutility= new WaitUtility();
+		waitutility.waitForElement(driver, saveButton);
 		saveButton.click();
 		return this;
 	}
 	public boolean checkSuccessAlertIsPresent()
 	{   
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-	    wait.until(ExpectedConditions.visibilityOf(successAlertField));
+		waitutility= new WaitUtility();
+		waitutility.waitForElement(driver, successAlertField);
 		boolean successAlertFieldStatus= successAlertField.isDisplayed();
 		return successAlertFieldStatus;
 	}
@@ -87,8 +91,8 @@ public WebDriver driver;
 	}
 	public ManageDeliveryBoyPage enterDatatoSearchTextField(String deliveryboyname)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(nameSearchTextField));
+		waitutility= new WaitUtility();
+		waitutility.waitForElement(driver, nameSearchTextField);
 		nameSearchTextField.sendKeys(deliveryboyname);
 		return this;
 	}

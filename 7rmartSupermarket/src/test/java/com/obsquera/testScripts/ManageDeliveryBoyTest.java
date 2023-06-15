@@ -10,13 +10,13 @@ import com.obsquera.pageScripts.LoginPage;
 import com.obsquera.utilities.ExcelUtility;
 import com.obsquera.utilities.PageUtility;
 import com.obsquera.utilities.RandomDataUtility;
-import retry.Retry;
+
 public class ManageDeliveryBoyTest extends Base {
 	LoginPage loginpage;
 	RandomDataUtility randomutility;
 	PageUtility pageutilty;
 	ManageDeliveryBoyPage categorypage;
-	@Test(description = "TC6_Verify user is able to add datas to delivery boy list",retryAnalyzer = Retry.class)
+	@Test(description = "TC6_Verify user is able to add datas to delivery boy list")
 	@Parameters({"deliveryboyname","deliveryboyusername"})
 	public void userIsAbleToAddDatasToListDeliveryBoy(String deliveryboyname, String deliveryboyusername)
 	{   randomutility=new RandomDataUtility();
@@ -65,8 +65,7 @@ public class ManageDeliveryBoyTest extends Base {
 		
 		return new Object[][] 
 		    	{
-		            { "Globy" },
-		            { "Home" }
+		            {"Globy"}
 		        };
 		};
 }

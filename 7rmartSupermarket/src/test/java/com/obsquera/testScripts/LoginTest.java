@@ -1,6 +1,8 @@
 package com.obsquera.testScripts;
 
 import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.obsquera.pageScripts.LoginPage;
@@ -39,12 +41,18 @@ public class LoginTest extends Base{
 		
 	}
 	
-	@Test(priority = 4,description = "TC006_Verify home page title",groups = {"Smoke"})
-	public void verifyTheUserCannotBeAbletoLoginwithInValidusernameandInValidPasswordWhileClickonSignInButton()
+	@Test(priority = 4,description = "TC006_Verify home page title",groups = {"Smoke"},dataProvider = "LoginProvider")
+	public void verifyTheUserCannotBeAbletoLoginwithInValidusernameandInValidPasswordWhileClickonSignInButton(String username,String password)
 	{
 		loginpage=new LoginPage(driver);
-		loginpage.enterUserNameOnUserNameField(ExcelUtility.getString(3, 0, "LoginPage")).enterPasswordOnPasswordField(ExcelUtility.getString(3, 1, "LoginPage")).clickOnSignInButton();
+		loginpage.enterUserNameOnUserNameField(username).enterPasswordOnPasswordField(password).clickOnSignInButton();
 		String alertPageTitle=loginpage.getAlertMessageOfIncorrectUsernamePassword();
 		assertEquals(expectedAlertPageTitle,alertPageTitle,"Login page is  loaded even if username and password is invalid");
 	}
-}
+	
+	@DataProvider(name = "LoginProvider")
+	public Object[][] getDataFromTestData() {
+		return new Object[][] { { ExcelUtility.getString(3, 0, "LoginPage"),ExcelUtility.getString(3, 1, "LoginPage") },
+
+		};
+}}

@@ -1,6 +1,8 @@
 package com.obsquera.testScripts;
 
 import static org.testng.Assert.assertTrue;
+
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.obsquera.pageScripts.ManageDeliveryBoyPage;
@@ -8,14 +10,13 @@ import com.obsquera.pageScripts.LoginPage;
 import com.obsquera.utilities.ExcelUtility;
 import com.obsquera.utilities.PageUtility;
 import com.obsquera.utilities.RandomDataUtility;
-
+import retry.Retry;
 public class ManageDeliveryBoyTest extends Base {
 	LoginPage loginpage;
 	RandomDataUtility randomutility;
 	PageUtility pageutilty;
 	ManageDeliveryBoyPage categorypage;
-	@Test(description = "TC6_Verify user is able to add datas to delivery boy list")
-	//retryAnalyzer = Retry.class
+	@Test(description = "TC6_Verify user is able to add datas to delivery boy list",retryAnalyzer = Retry.class)
 	@Parameters({"deliveryboyname","deliveryboyusername"})
 	public void userIsAbleToAddDatasToListDeliveryBoy(String deliveryboyname, String deliveryboyusername)
 	{   randomutility=new RandomDataUtility();
@@ -29,8 +30,8 @@ public class ManageDeliveryBoyTest extends Base {
 		assertTrue(actualSuccessAlertFieldStatus,"User is not able to enter datas to list delivery Boypage");
 	}
 	
-	@Test(description = "TC7_Verify user is able to search names in list Delivery Boy page")
-	@Parameters({"deliveryboyname"})
+	@Test(description = "TC7_Verify user is able to search names in list Delivery Boy page",dataProvider="LoginProvider")
+	
 	public void checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages(String deliveryboyname)
 	{   
 		loginpage=new LoginPage(driver);
@@ -42,6 +43,7 @@ public class ManageDeliveryBoyTest extends Base {
 		boolean searchContentFoundStatus=categorypage.checkWhetherResponseTableContainsCorrespondingEntry(deliveryboyname);
 		assertTrue(searchContentFoundStatus,"User is not able to search names in list Delivery Boy pages");
 			}
+	
 	
 	@Test(description="TC8_Verify that user can able to update the status in delivery boy list page")
 
@@ -58,5 +60,13 @@ public class ManageDeliveryBoyTest extends Base {
 		
 	}
 	
-	
+	@DataProvider(name = "LoginProvider")
+	public Object[][] getDataFromTestData() {
+		
+		return new Object[][] 
+		    	{
+		            { "Globy" },
+		            { "Home" }
+		        };
+		};
 }

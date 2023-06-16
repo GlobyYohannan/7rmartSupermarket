@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import com.obsquera.utilities.GeneralUtility;
 import com.obsquera.utilities.PageUtility;
 import com.obsquera.utilities.WaitUtility;
 
@@ -40,7 +42,7 @@ public class ManageSliderPage {
 	
 	public ManageSliderPage uploadFile()
 	{
-		chooseFileButton.sendKeys("C:\\Users\\user\\Downloads\\doggy1.jpg");
+		chooseFileButton.sendKeys(GeneralUtility.IMAGEFILEFORMANAGECATEGORYCATEGORYPAGE );
 		return this;
 	}
 	public ManageSliderPage pageScrollDown()

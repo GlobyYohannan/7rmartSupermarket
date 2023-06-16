@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.obsquera.pageScripts.LoginPage;
 import com.obsquera.pageScripts.ManageSliderPage;
 import com.obsquera.utilities.ExcelUtility;
+import com.obsquera.utilities.GeneralUtility;
 
 import retry.Retry;
 

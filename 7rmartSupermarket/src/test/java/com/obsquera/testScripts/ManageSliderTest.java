@@ -1,21 +1,19 @@
 package com.obsquera.testScripts;
 
 import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.obsquera.pageScripts.LoginPage;
-import com.obsquera.pageScripts.ManageDeliveryBoyPage;
 import com.obsquera.pageScripts.ManageSliderPage;
 import com.obsquera.utilities.ExcelUtility;
+
+import retry.Retry;
 
 public class ManageSliderTest extends Base{
 
 	LoginPage loginpage;
 	ManageSliderPage manageslider;
-	@Test(description = "TC9_Verify user is able to add datas to delivery boy list",dataProvider = "links")
+	@Test(description = "TC9_Verify user is able to add datas to delivery boy list",dataProvider = "links",retryAnalyzer = Retry.class)
 	
 	public void userCanAbleToAddNewSlider(String link)
 	{   
@@ -30,7 +28,7 @@ public class ManageSliderTest extends Base{
 		boolean actualSuccessAlertFieldStatus=manageslider.checkSuccessAlertIsPresent();
 		assertTrue(actualSuccessAlertFieldStatus,"User is not able to add new slider to list slider page");
 	}
-	@Test(description="TC10_Verify that user can able to update the status in List sliders page")
+	@Test(description="TC10_Verify that user can able to update the status in List sliders page",retryAnalyzer = Retry.class)
 
 	public void checkWhetherUserIsAbleToUpdateStatusOfSliderPage()
 	{

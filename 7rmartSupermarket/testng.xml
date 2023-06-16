@@ -19,13 +19,9 @@
 	</listeners>
   <test thread-count="5" name="Test">
 	  <classes>
-		  <class name="com.obsquera.testScripts.ManageDeliveryBoyTest">
-			   <methods>
-				  <include name="userIsAbleToAddDatasToListDeliveryBoy"/>
-				  <include name="checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages"/>
-				  <include name="checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage"/>
-			  </methods> 
-		  </class>
+		<class name="com.obsquera.testScripts.ManageDeliveryBoyTest"/>
+		<class name="com.obsquera.testScripts.ManagePageTest"/>
+		<class name="com.obsquera.testScripts.ManageSliderTest"/>
 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

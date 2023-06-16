@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquera.testScripts.ManagePageTest">
+      <class name="com.obsquera.testScripts.ManageSliderTest">
         <methods>
-          <include name="checkWhetherUserIsAbleToSearchPagesInManagePages"/>
           <include name="browserQuit"/>
+          <include name="checkWhetherUserIsAbleToUpdateStatusOfSliderPage"/>
+          <include name="userCanAbleToAddNewSlider"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquera.testScripts.ManagePageTest -->
+      </class> <!-- com.obsquera.testScripts.ManageSliderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

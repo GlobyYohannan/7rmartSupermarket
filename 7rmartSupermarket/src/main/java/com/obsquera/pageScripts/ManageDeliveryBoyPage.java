@@ -8,9 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.obsquera.utilities.WaitUtility;
 
 public class ManageDeliveryBoyPage {
@@ -38,6 +35,7 @@ WaitUtility waitutility;
 	@FindBy(xpath="//button[@name='update']") WebElement updateButton;
 	@FindBy(xpath="//div[contains(@class,'alert alert-danger alert-dismissible')]") WebElement failureAlertField;
 	@FindBy(xpath="//span[contains(@class,'badge bg-success')]") WebElement activeStatusButton;
+	
 	public ManageDeliveryBoyPage clickOnManageDeliveryBoyTileMoreInfoButton()
 	{
 		manageDeliveryBoyMoreInfoButton.click();
@@ -127,16 +125,16 @@ WaitUtility waitutility;
 		return this;
 	}
 	public ManageDeliveryBoyPage clickOnUpdateButton()
-	{  
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(updateButton));
+	{ 	
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, updateButton);
 		updateButton.click();
 		return this;
 	}
 	public boolean checkFailureAlertIsPresent()
-	{   
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-	    wait.until(ExpectedConditions.visibilityOf(failureAlertField));
+	{   	
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, failureAlertField);
 		boolean failureAlertFieldStatus= failureAlertField.isDisplayed();
 		return failureAlertFieldStatus;
 	}
@@ -148,9 +146,9 @@ WaitUtility waitutility;
 		return this;
 	}
 	public ManageDeliveryBoyPage clickOnActiveStatusButton()
-	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(activeStatusButton));
+	{	
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver, activeStatusButton);
 		activeStatusButton.click();
 		return this;
 	}

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,85 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">18 methods, 4 failed,  8 skipped,  6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,7 +192,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageDeliveryBoyTest" class="method navigator-link" hash-for-method="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageSliderTest" class="method navigator-link" hash-for-method="checkWhetherUserIsAbleToUpdateStatusOfSliderPage">checkWhetherUserIsAbleToUpdateStatusOfSliderPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages(.........RESULT NOT FOUND.......)">checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages(.........RESULT NOT FOUND.......)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManageSliderTest" class="method navigator-link" hash-for-method="userCanAbleToAddNewSlider(www.google.com)">userCanAbleToAddNewSlider(www.google.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.obsquera.testScripts.ManagePageTest" class="method navigator-link" hash-for-method="userIsAbleToEnterDatasToListPage(Globy, first added data by Globy, GY1)">userIsAbleToEnterDatasToListPage(Globy, first added data by Globy, GY1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -129,6 +222,306 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManagePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">
+                  </a> <!-- checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated) -->
+                  <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages</span>
+                  <span class="parameters">(Globy, GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToEditPagesInManagePages(ManagePageTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC3_Verify user is able to edit pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">
+                  </a> <!-- checkWhetherUserIsAbleToSearchPagesInManagePages(Globy) -->
+                  <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages</span>
+                  <span class="parameters">(Globy)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToSearchPagesInManagePages(ManagePageTest.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC2_Verify user is able to search pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">
+                  </a> <!-- checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated) -->
+                  <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages</span>
+                  <span class="parameters">(GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(ManagePageTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC4_Verify user is able to delete pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManageDeliveryBoyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">
+                  </a> <!-- userIsAbleToAddDatasToListDeliveryBoy(Globy, GY) -->
+                  <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy</span>
+                  <span class="parameters">(Globy, GY)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 715)
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac7698a73e8cb27795b65e9558f28bed, clickElement {id=7612E036CD5D87F6B0F748B26FBF4F67_element_40}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55972}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55972/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (ac7698a73e8cb27795b65e9558f28bed)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: ac7698a73e8cb27795b65e9558f28bed
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at com.obsquera.pageScripts.ManageDeliveryBoyPage.clickOnSaveButton(ManageDeliveryBoyPage.java:75)
+	at com.obsquera.testScripts.ManageDeliveryBoyTest.userIsAbleToAddDatasToListDeliveryBoy(ManageDeliveryBoyTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC6_Verify user is able to add datas to delivery boy list)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManagePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">
+                  </a> <!-- checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated) -->
+                  <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages</span>
+                  <span class="parameters">(Globy, GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToEditPagesInManagePages(ManagePageTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC3_Verify user is able to edit pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)">
+                  </a> <!-- checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated) -->
+                  <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages</span>
+                  <span class="parameters">(Globy, GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToEditPagesInManagePages(ManagePageTest.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC3_Verify user is able to edit pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">
+                  </a> <!-- checkWhetherUserIsAbleToSearchPagesInManagePages(Globy) -->
+                  <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages</span>
+                  <span class="parameters">(Globy)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToSearchPagesInManagePages(ManagePageTest.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC2_Verify user is able to search pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)">
+                  </a> <!-- checkWhetherUserIsAbleToSearchPagesInManagePages(Globy) -->
+                  <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages</span>
+                  <span class="parameters">(Globy)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkWhetherUserIsAbleToSearchPagesInManagePages(ManagePageTest.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC2_Verify user is able to search pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">
+                  </a> <!-- checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated) -->
+                  <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages</span>
+                  <span class="parameters">(GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(ManagePageTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC4_Verify user is able to delete pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)">
+                  </a> <!-- checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated) -->
+                  <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages</span>
+                  <span class="parameters">(GlobyUpdated)</span>
+                  <div class="stack-trace">java.lang.AssertionError: User is not able to search Title in list pages expected [true] but found [false]
+	at com.obsquera.testScripts.ManagePageTest.checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(ManagePageTest.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC4_Verify user is able to delete pages in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManageDeliveryBoyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">
+                  </a> <!-- userIsAbleToAddDatasToListDeliveryBoy(Globy, GY) -->
+                  <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy</span>
+                  <span class="parameters">(Globy, GY)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 650)
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe314fd9900b9a76d2f90a6b6e0e07b5, clickElement {id=F730B725CCC91208592BB808FCEE266B_element_43}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55927/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (fe314fd9900b9a76d2f90a6b6e0e07b5)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: fe314fd9900b9a76d2f90a6b6e0e07b5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at com.obsquera.pageScripts.ManageDeliveryBoyPage.clickOnSaveButton(ManageDeliveryBoyPage.java:75)
+	at com.obsquera.testScripts.ManageDeliveryBoyTest.userIsAbleToAddDatasToListDeliveryBoy(ManageDeliveryBoyTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC6_Verify user is able to add datas to delivery boy list)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">
+                  </a> <!-- userIsAbleToAddDatasToListDeliveryBoy(Globy, GY) -->
+                  <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy</span>
+                  <span class="parameters">(Globy, GY)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (334, 714)
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [07615d7d75b03d5afc674105b067059b, clickElement {id=4D4E6749B79395935B930D9ECEF4CF04_element_40}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55951/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (07615d7d75b03d5afc674105b067059b)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 07615d7d75b03d5afc674105b067059b
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at com.obsquera.pageScripts.ManageDeliveryBoyPage.clickOnSaveButton(ManageDeliveryBoyPage.java:75)
+	at com.obsquera.testScripts.ManageDeliveryBoyTest.userIsAbleToAddDatasToListDeliveryBoy(ManageDeliveryBoyTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(TC6_Verify user is able to add datas to delivery boy list)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManagePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages(.........RESULT NOT FOUND.......)">
+                  </a> <!-- checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages(.........RESULT NOT FOUND.......) -->
+                  <span class="method-name">checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages</span>
+                  <span class="parameters">(.........RESULT NOT FOUND.......)</span>
+                  <em>
+(TC5_Verify that user is getting no result found if search with not existing page in list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userIsAbleToEnterDatasToListPage(Globy, first added data by Globy, GY1)">
+                  </a> <!-- userIsAbleToEnterDatasToListPage(Globy, first added data by Globy, GY1) -->
+                  <span class="method-name">userIsAbleToEnterDatasToListPage</span>
+                  <span class="parameters">(Globy, first added data by Globy, GY1)</span>
+                  <em>
+(TC1_Verify user is able to add datas to list page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -154,14 +547,31 @@
 (TC8_Verify that user can able to update the status in delivery boy list page)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.obsquera.testScripts.ManageSliderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)">
-                  </a> <!-- userIsAbleToAddDatasToListDeliveryBoy(Globy, GY) -->
-                  <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy</span>
-                  <span class="parameters">(Globy, GY)</span>
+                  <a name="checkWhetherUserIsAbleToUpdateStatusOfSliderPage">
+                  </a> <!-- checkWhetherUserIsAbleToUpdateStatusOfSliderPage -->
+                  <span class="method-name">checkWhetherUserIsAbleToUpdateStatusOfSliderPage</span>
                   <em>
-(TC6_Verify user is able to add datas to delivery boy list)                  </em>
+(TC10_Verify that user can able to update the status in List sliders page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userCanAbleToAddNewSlider(www.google.com)">
+                  </a> <!-- userCanAbleToAddNewSlider(www.google.com) -->
+                  <span class="method-name">userCanAbleToAddNewSlider</span>
+                  <span class="parameters">(www.google.com)</span>
+                  <em>
+(TC9_Verify user is able to add datas to delivery boy list)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,13 +604,9 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.obsquera.testScripts.ManageDeliveryBoyTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;userIsAbleToAddDatasToListDeliveryBoy&quot;/&gt;
-          &lt;include name=&quot;checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages&quot;/&gt;
-          &lt;include name=&quot;checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.obsquera.testScripts.ManageDeliveryBoyTest --&gt;
+      &lt;class name=&quot;com.obsquera.testScripts.ManageDeliveryBoyTest&quot;/&gt;
+      &lt;class name=&quot;com.obsquera.testScripts.ManagePageTest&quot;/&gt;
+      &lt;class name=&quot;com.obsquera.testScripts.ManageSliderTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -214,7 +620,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -240,24 +646,84 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'userIsAbleToAddDatasToListDeliveryBoy')
-data.setCell(0, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
-data.setCell(0, 3, 4851);
+data.setCell(0, 1, 'userIsAbleToEnterDatasToListPage')
+data.setCell(0, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(0, 3, 4639);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage')
+data.setCell(1, 1, 'userIsAbleToAddDatasToListDeliveryBoy')
 data.setCell(1, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
-data.setCell(1, 3, 2395);
+data.setCell(1, 3, 4072);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages')
+data.setCell(2, 1, 'userIsAbleToAddDatasToListDeliveryBoy')
 data.setCell(2, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
-data.setCell(2, 3, 2361);
+data.setCell(2, 3, 3886);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkWhetherUserIsAbleToEditPagesInManagePages')
+data.setCell(3, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(3, 3, 3841);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'userIsAbleToAddDatasToListDeliveryBoy')
+data.setCell(4, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
+data.setCell(4, 3, 3731);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages')
+data.setCell(5, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
+data.setCell(5, 3, 3671);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkWhetherUserIsAbleToEditPagesInManagePages')
+data.setCell(6, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(6, 3, 3404);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checkwhetherUserCanAbleToDeleteAddedEntryInManagePages')
+data.setCell(7, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(7, 3, 3110);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'userCanAbleToAddNewSlider')
+data.setCell(8, 2, 'com.obsquera.testScripts.ManageSliderTest')
+data.setCell(8, 3, 3076);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage')
+data.setCell(9, 2, 'com.obsquera.testScripts.ManageDeliveryBoyTest')
+data.setCell(9, 3, 2918);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'checkWhetherUserIsAbleToSearchPagesInManagePages')
+data.setCell(10, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(10, 3, 2857);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'checkWhetherUserIsAbleToSearchPagesInManagePages')
+data.setCell(11, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(11, 3, 2743);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'checkwhetherUserCanAbleToDeleteAddedEntryInManagePages')
+data.setCell(12, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(12, 3, 2729);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages')
+data.setCell(13, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(13, 3, 2668);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'checkWhetherUserIsAbleToSearchPagesInManagePages')
+data.setCell(14, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(14, 3, 2645);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'checkwhetherUserCanAbleToDeleteAddedEntryInManagePages')
+data.setCell(15, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(15, 3, 2568);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'checkWhetherUserIsAbleToUpdateStatusOfSliderPage')
+data.setCell(16, 2, 'com.obsquera.testScripts.ManageSliderTest')
+data.setCell(16, 3, 2497);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'checkWhetherUserIsAbleToEditPagesInManagePages')
+data.setCell(17, 2, 'com.obsquera.testScripts.ManagePageTest')
+data.setCell(17, 3, 2440);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 57 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -289,36 +755,230 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</span>
-                <span class="method-start">7719 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=userIsAbleToAddDatasToListDeliveryBoy status=SUCCESS method=ManageDeliveryBoyTest.u...)</span>
-                <span class="method-start">12590 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeBrowser(chrome)</span>
-                <span class="method-start">13215 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages(Globy)</span>
-                <span class="method-start">18649 ms</span>
+                <span class="method-start">6543 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages status=SUCCESS method=ManageD...)</span>
-                <span class="method-start">21013 ms</span>
+                <span class="method-start">10227 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(chrome)</span>
-                <span class="method-start">21503 ms</span>
+                <span class="method-start">10726 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage</span>
-                <span class="method-start">25669 ms</span>
+                <span class="method-start">14838 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage status=SUCCESS method=Man...)</span>
-                <span class="method-start">28065 ms</span>
+                <span class="method-start">17760 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">18198 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</span>
+                <span class="method-start">22589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=userIsAbleToAddDatasToListDeliveryBoy status=SKIP method=ManageDeliveryBoyTest.user...)</span>
+                <span class="method-start">26672 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">27180 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</span>
+                <span class="method-start">32746 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=userIsAbleToAddDatasToListDeliveryBoy status=SKIP method=ManageDeliveryBoyTest.user...)</span>
+                <span class="method-start">36644 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">37089 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">userIsAbleToAddDatasToListDeliveryBoy(Globy, GY)</span>
+                <span class="method-start">41328 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=userIsAbleToAddDatasToListDeliveryBoy status=FAILURE method=ManageDeliveryBoyTest.u...)</span>
+                <span class="method-start">45086 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsquera.testScripts.ManagePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">45792 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</span>
+                <span class="method-start">50825 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToEditPagesInManagePages status=SKIP method=ManagePageTest.ch...)</span>
+                <span class="method-start">54231 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">54784 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</span>
+                <span class="method-start">59402 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToEditPagesInManagePages status=SKIP method=ManagePageTest.ch...)</span>
+                <span class="method-start">61844 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">62309 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkWhetherUserIsAbleToEditPagesInManagePages(Globy, GlobyUpdated)</span>
+                <span class="method-start">67212 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToEditPagesInManagePages status=FAILURE method=ManagePageTest...)</span>
+                <span class="method-start">71058 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">71781 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</span>
+                <span class="method-start">77415 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToSearchPagesInManagePages status=SKIP method=ManagePageTest....)</span>
+                <span class="method-start">80273 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">80702 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</span>
+                <span class="method-start">86476 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToSearchPagesInManagePages status=SKIP method=ManagePageTest....)</span>
+                <span class="method-start">89123 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">89513 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkWhetherUserIsAbleToSearchPagesInManagePages(Globy)</span>
+                <span class="method-start">93580 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToSearchPagesInManagePages status=FAILURE method=ManagePageTe...)</span>
+                <span class="method-start">96328 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">96905 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages(.........RESULT NOT FOUND.......)</span>
+                <span class="method-start">102042 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsGettingNoResultFoundWhileSearchWithNonExistingPagesInManagePages ...)</span>
+                <span class="method-start">104711 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">105142 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</span>
+                <span class="method-start">109277 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkwhetherUserCanAbleToDeleteAddedEntryInManagePages status=SKIP method=ManagePag...)</span>
+                <span class="method-start">111848 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">112226 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</span>
+                <span class="method-start">116335 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkwhetherUserCanAbleToDeleteAddedEntryInManagePages status=SKIP method=ManagePag...)</span>
+                <span class="method-start">119446 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">119826 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkwhetherUserCanAbleToDeleteAddedEntryInManagePages(GlobyUpdated)</span>
+                <span class="method-start">127059 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkwhetherUserCanAbleToDeleteAddedEntryInManagePages status=FAILURE method=Manage...)</span>
+                <span class="method-start">129792 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">130386 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userIsAbleToEnterDatasToListPage(Globy, first added data by Globy, GY1)</span>
+                <span class="method-start">134229 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=userIsAbleToEnterDatasToListPage status=SUCCESS method=ManagePageTest.userIsAbleToE...)</span>
+                <span class="method-start">138870 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.obsquera.testScripts.ManageSliderTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">139424 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">checkWhetherUserIsAbleToUpdateStatusOfSliderPage</span>
+                <span class="method-start">143404 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=checkWhetherUserIsAbleToUpdateStatusOfSliderPage status=SUCCESS method=ManageSlider...)</span>
+                <span class="method-start">145902 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(chrome)</span>
+                <span class="method-start">146348 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">userCanAbleToAddNewSlider(www.google.com)</span>
+                <span class="method-start">150917 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserQuit([TestResult name=userCanAbleToAddNewSlider status=SUCCESS method=ManageSliderTest.userCanAbleToAddNe...)</span>
+                <span class="method-start">153995 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

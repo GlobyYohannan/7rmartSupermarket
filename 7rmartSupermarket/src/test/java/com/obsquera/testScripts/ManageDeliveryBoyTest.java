@@ -11,12 +11,14 @@ import com.obsquera.utilities.ExcelUtility;
 import com.obsquera.utilities.PageUtility;
 import com.obsquera.utilities.RandomDataUtility;
 
+import retry.Retry;
+
 public class ManageDeliveryBoyTest extends Base {
 	LoginPage loginpage;
 	RandomDataUtility randomutility;
 	PageUtility pageutilty;
 	ManageDeliveryBoyPage categorypage;
-	@Test(description = "TC6_Verify user is able to add datas to delivery boy list")
+	@Test(priority = 1,description = "TC6_Verify user is able to add datas to delivery boy list",retryAnalyzer = Retry.class)
 	@Parameters({"deliveryboyname","deliveryboyusername"})
 	public void userIsAbleToAddDatasToListDeliveryBoy(String deliveryboyname, String deliveryboyusername)
 	{   randomutility=new RandomDataUtility();
@@ -30,7 +32,7 @@ public class ManageDeliveryBoyTest extends Base {
 		assertTrue(actualSuccessAlertFieldStatus,"User is not able to enter datas to list delivery Boypage");
 	}
 	
-	@Test(description = "TC7_Verify user is able to search names in list Delivery Boy page",dataProvider="LoginProvider")
+	@Test(priority = 2,description = "TC7_Verify user is able to search names in list Delivery Boy page",dataProvider="LoginProvider",retryAnalyzer = Retry.class)
 	
 	public void checkWhetherUserIsAbleToSearchNamesInDeliveryBoyPages(String deliveryboyname)
 	{   
@@ -45,7 +47,7 @@ public class ManageDeliveryBoyTest extends Base {
 			}
 	
 	
-	@Test(description="TC8_Verify that user can able to update the status in delivery boy list page")
+	@Test(priority = 3,description="TC8_Verify that user can able to update the status in delivery boy list page",retryAnalyzer = Retry.class)
 
 	public void checkWhetherUserIsAbleToUpdateStatusInDeliveryBoyListPage()
 	{

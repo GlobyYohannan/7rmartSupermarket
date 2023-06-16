@@ -1,18 +1,19 @@
 package com.obsquera.testScripts;
 
 import static org.testng.Assert.assertEquals;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.obsquera.pageScripts.LoginPage;
 import com.obsquera.utilities.ExcelUtility;
 
+import retry.Retry;
+
 public class LoginTest extends Base{
 	LoginPage loginpage;
 	public String expectedmanagePageTileTitle="Manage Pages";
 	public String expectedAlertPageTitle="Alert!";
-	@Test(priority = 1,description = "TC001_Verify home page title",groups = {"Regression","Smoke"})
+	@Test(priority = 1,description = "TC001_Verify home page title",groups = {"Regression","Smoke"},retryAnalyzer = Retry.class)
 	public void verifyTheUserCanAbletoLoginwithValidusernameandValidPasswordWhileClickonSignInButton()
 	{
 		loginpage=new LoginPage(driver);
@@ -21,7 +22,7 @@ public class LoginTest extends Base{
 		assertEquals(expectedmanagePageTileTitle,managePageTitle,"Login page is not loaded");
 	}
 	
-	@Test(priority = 2,description = "TC006_Verify home page title",groups = {"Regression"})
+	@Test(priority = 2,description = "TC006_Verify home page title",groups = {"Regression"},retryAnalyzer = Retry.class)
 	public void verifyTheUserCannotBeAbletoLoginwithInValidusernameandValidPasswordWhileClickonSignInButton()
 	{
 		loginpage=new LoginPage(driver);
@@ -30,7 +31,7 @@ public class LoginTest extends Base{
 		assertEquals(expectedAlertPageTitle,alertPageTitle,"Login page is  loaded even if username is invalid");
 	}
 	
-	@Test(priority = 3,description = "TC006_Verify home page title",groups = {"Smoke"})
+	@Test(priority = 3,description = "TC006_Verify home page title",groups = {"Smoke"},retryAnalyzer = Retry.class)
 	@Parameters({"username","password"})
 	public void verifyTheUserCannotBeAbletoLoginwithValidusernameandInValidPasswordWhileClickonSignInButton(String username, String password)
 	{
@@ -41,7 +42,7 @@ public class LoginTest extends Base{
 		
 	}
 	
-	@Test(priority = 4,description = "TC006_Verify home page title",groups = {"Smoke"},dataProvider = "LoginProvider")
+	@Test(priority = 4,description = "TC006_Verify home page title",groups = {"Smoke"},dataProvider = "LoginProvider",retryAnalyzer = Retry.class)
 	public void verifyTheUserCannotBeAbletoLoginwithInValidusernameandInValidPasswordWhileClickonSignInButton(String username,String password)
 	{
 		loginpage=new LoginPage(driver);

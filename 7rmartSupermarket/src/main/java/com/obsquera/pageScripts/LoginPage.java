@@ -1,17 +1,15 @@
 package com.obsquera.pageScripts;
 
-import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.obsquera.utilities.WaitUtility;
 
 public class LoginPage {
 	
 	public WebDriver driver;
-	
+	WaitUtility waitutility;
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -49,8 +47,8 @@ public class LoginPage {
 	
 	public String getAlertMessageOfIncorrectUsernamePassword()
 	{   
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(alertField));
+		waitutility=new WaitUtility();
+		waitutility.waitForElement(driver,alertField);
 		String actualalert=alertField.getText();
 		return actualalert;
 	}

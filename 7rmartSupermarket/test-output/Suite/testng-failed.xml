@@ -19,9 +19,18 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.obsquera.testScripts.ManagePageTest">
+        <methods>
+          <include name="checkwhetherUserCanAbleToDeleteAddedEntryInManagePages" invocation-numbers="0 0 0"/>
+          <include name="checkWhetherUserIsAbleToSearchPagesInManagePages" invocation-numbers="0 0 0"/>
+          <include name="checkWhetherUserIsAbleToEditPagesInManagePages" invocation-numbers="0 0 0"/>
+          <include name="browserQuit"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.obsquera.testScripts.ManagePageTest -->
       <class name="com.obsquera.testScripts.ManageDeliveryBoyTest">
         <methods>
-          <include name="userIsAbleToAddDatasToListDeliveryBoy" invocation-numbers="0"/>
+          <include name="userIsAbleToAddDatasToListDeliveryBoy" invocation-numbers="0 0 0"/>
           <include name="browserQuit"/>
           <include name="initializeBrowser"/>
         </methods>
